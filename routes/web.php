@@ -13,7 +13,7 @@ use App\Helpers\Hello;
 | contains the "web" middleware group. Now create something great!
 |
 */
-
+Route::get('', [BookController::class, ''])
 Route::get('/buku', [BookController::class, 'viewBook'])
 ->middleware('admin');
 // Route::get('/hi',[Hello::class , 'sayHello']);

@@ -16,9 +16,9 @@ class Admin
      */
     public function handle(Request $request, Closure $next)
     {
-        if (!$request->get('id')) {
-            return redirect('/buku');
-        }
-        return $next($request);
+        // if (!$request->input('tangal')) {
+        //     return redirect('/buku');
+        // }
+        // return $next($request);
     }
 }
