@@ -1,8 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\BukuController;
-
+use App\Http\Controllers\BookController;
+use App\Helpers\Hello;		
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -14,9 +14,17 @@ use App\Http\Controllers\BukuController;
 |
 */
 
-Route::get('buku', [BukuController::class, 'viewBook']);
-Route::post('buku/add', [BukuController::class, 'postAddBook']);
-Route::post('buku/edit', [BukuController::class, 'postEditBook']);
-Route::post('buku/delete', [BukuController::class, 'postDeleteBook']);
+Route::get('/buku', [BookController::class, 'viewBook'])
+->middleware('admin');
+// Route::get('/hi',[Hello::class , 'sayHello']);
+// Route::get('/hi', );
+Route::get('/hi', function(){
+	return bilangHello();
+});
+
+
+Route::post('buku/add', [BookController::class, 'postAddBook']);
+Route::post('buku/edit', [BookController::class, 'postEditBook']);
+Route::post('buku/delete', [BookController::class, 'postDeleteBook']);
 
 

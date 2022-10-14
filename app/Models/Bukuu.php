@@ -5,12 +5,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Buku extends Model
+class Bukuu extends Model
 {
     use HasFactory;
-    public $timestamps = false;
-    protected $table = 'buku';
-    protected $primaryKey = 'id';
-    
 }
-    

@@ -18,11 +18,11 @@
             {{ csrf_field() }}
             <div class="mb-3">
                 <label for="judul" class="form-label">Judul Buku</label>
-                <input type="text" name="tittle" class="form-control" id="judul" >
+                <input min="10" type="text"  name="tittle" class="form-control" id="judul" required autofocus>
             </div>
             <label for="description">Deskripsi buku</label>
             <div class="form-floating">
-                <textarea class="form-control" name="desc" placeholder="Deskripsi Buku" id="description" style="height: 100px"></textarea>
+                <textarea class="form-control" name="desc" required min="10" placeholder="Deskripsi Buku" id="description" style="height: 100px"></textarea>
             </div>
             </div>
             <div class="modal-footer">
